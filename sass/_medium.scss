@@ -1,0 +1,32 @@
+@media (min-width: 576px){
+    html{
+
+        font-size: 62.5%;
+
+     }
+    
+         .main{
+            &__box2{
+    &__btnBox{
+        &__btn1, &__btn2{
+            width: 18rem;
+        }
+    }
+         }
+         input[type="radio"]:checked + label:after {
+            transform: translate(-25%,-25%);
+        }
+        }
+        .footer{
+            &__text{
+                font-size: 2rem;
+        }
+        .panel{
+            height: 16vh;
+            width: 100%;
+            #refresh {
+                padding: 0.6rem 0.8rem;
+            }
+        }
+    }
+}

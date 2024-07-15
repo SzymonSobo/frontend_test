@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c3e482de76.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Zadanie rekrutacyjne</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__box">
+            <a href="/"><i class="fa-brands fa-html5 header__box__item"></i></a>
+        </div>
+        <div class="header__text"> 
+            <p>Zadanie <span style="font-weight: bold;">rekrutacyjne</span></p>
+            <p class="header__text__par header__text__par--disactive">Szymon Soboń</p>
+        </div>   
+    </div>
+    <main>
+        <div class="main">
+        <div class="main__title">
+            <h1>Nagłówek H1</h1>
+        </div>
+            <div class="main__boxes">
+                <div class="main__boxes__box main__boxes__box1">
+                    <div class="main__boxes__box__title main__boxes__box1__title">
+                        <h2>blok pierwszy</h2>
+                    </div>
+                    <div class="main__boxes__box1__radius">
+                        <input type="radio" id="inputRadio1" name="options" value="1">
+                        <label for="inputRadio1" class="main__boxes__box1__radius__label">Opcja pierwsza</label><br>
+                        <input type="radio" id="inputRadio2" name="options" value="2">
+                        <label for="inputRadio2" class="main__boxes__box1__radius__label">Opcja druga</label><br>
+                        <input type="radio" id="inputRadio3" name="options" value="3">
+                        <label for="inputRadio3" class="main__boxes__box1__radius__label">Opcja losowa</label><br> 
+                    </div>
+                </div>
+                <div class="main__boxes__box main__boxes__box2">
+                    <div class="main__boxes__box__title main__boxes__box2__title">
+                        <h2>blok drugi</h2>
+                    </div>
+                    <div class="main__boxes__box2__btnBox">
+                        <button class="main__boxes__box2__btnBox__btn1">Zastąp</button>
+                        <button class="main__boxes__box2__btnBox__btn2">Doklej</button>
+                    </div>
+                </div>
+                <div class="main__boxes__box main__boxes__box3">
+                    <div class="main__boxes__box__title main__boxes__box3__title">
+                        <h2>blok z długą nazwą która sama się przytnie</h2>
+                    </div>
+                    <div class="main__boxes__box3__text">
+                       <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur reiciendis obcaecati tempore ad cupiditate corporis iusto harum. Nam, at dolorum? Quisquam accusamus at tenetur ad repellat, iure expedita fugiat tempore!</p>
+                    </div>
+                </div>
+            </div> 
+            </div> 
+            <footer class="footer">
+                <div class="footer__text">
+                    <span>
+                        css<br/>
+                        is<br/>
+                        awesome<br/>
+                    </span>
+                </div>
+                <div class="footer__mask"></div>
+                    <button class="footer__btn">pokaż <i class="fa-solid fa-angle-up footer_btn_icon footer__btn__icon"></i></button>
+    
+                <div class="footer__optionsBox">
+                    <button id="footer__optionsBox__btn1" class="footer__optionsBox__btn" onclick="window.location.reload()"><i class="fa-solid fa-angle-right footer_btn_icon footer__btn-icon"></i> Zresetuj ustawienia</button>
+                    <button id="footer__optionsBox__btn2"  class="footer__optionsBox__btn"><i class="fa-solid fa-angle-right footer_btn_icon footer__btn-icon"></i> pokaż dane osobowe </button>
+                </div>
+            </footer>
+    </main>
+    <div id="panel" class="panel">
+        <button id="refresh" onclick="window.location.reload()">Odśwież</button> 
+        <div class="panel__box">
+            <div class="panel__box__add">
+                <h2>Dodaj element</h2>
+                <input type="text" id="newParagraphDescription" placeholder="Wprowadź tekst">
+                <button id="addBtn">Dodaj</button>
+            </div>
+            <div class="panel__box__delete">
+                <h2>Usuń element</h2>
+                <input type="number" id="deleteId" placeholder="Wprowadź indeks">
+                <button id="deleteBtn">Usuń</button> 
+            </div>  
+        </div>
+    </div>
+    </div>
+       
+    <script src="./js/main.js"></script>
+</body>
+</html>

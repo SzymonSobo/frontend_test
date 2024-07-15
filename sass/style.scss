@@ -1,0 +1,408 @@
+@import './colors';
+@import './animations';
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ html{
+    height: 100%;
+    font-size: 50%;
+    font-family: "Open Sans", sans-serif;
+ }
+ body{
+    height: 100%;
+    margin: 0;
+    background-color: 
+    $bodyBackgroundColor;
+    color: white;
+ }
+ .header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+
+    background-color: $secondary-color;
+    z-index: 10;
+    &__box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 6rem;
+        width: 6rem;
+        background-color: $bodyBackgroundColor;
+        border-radius: 50%;
+        transition: background-color 0.4s;
+        &__item{
+            margin-top: 0.5rem;
+            font-size: 4rem;
+            color: white;
+        }
+        &:hover{
+            background-color: $hoverColor;
+        }
+    }
+    &__text{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        height: 20%;
+        padding: 1rem;
+        margin-right: 2rem;
+        font-size: 2rem;
+        &__par{
+            text-align: right;
+            opacity: 1;
+            transition:  opacity 1.5s,height 1.5s ease;
+            &--disactive{
+                height: 0;
+                opacity: 0;
+            }
+        }
+     }
+     }
+     main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+     }
+     
+     .main{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+        min-height: 80vh;
+        margin-top: 10vh;
+        &__title{
+            position: relative;
+            padding-bottom: 1rem;
+            margin-top: 3rem;
+            font-size: 2rem;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            height: 0.1rem;
+            width: 80%;
+            transform: translate(-50%,-50%);
+            background-color:$underlineColor;
+        }
+        }
+        &__boxes{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 4rem;
+            margin-top: 4rem;
+            font-size: 1.3rem;
+            &__box{
+                display: flex;
+                flex-direction: column;
+                &__title{
+                    width: 100%;
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                }
+
+            }
+            &__box1{
+                align-items: flex-start;
+                justify-content: center;
+                width: 50%;
+                &__title{
+                    width: 100%;
+                    text-align: left;
+                }
+                &__radius{
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    margin-top: 2rem;
+                    label {
+                        margin-right: 2rem;
+                    }
+                }
+            }
+            &__box2{
+                width: 50%;
+                &__title{
+                    text-align: right;
+                }
+    &__btnBox{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2rem;
+        &__btn1, &__btn2{
+            width: 14rem;
+            height: 4rem;
+            margin: 1rem 0;
+            background:transparent;
+            color: rgb(175, 173, 173);
+            border: 1px solid $borderLineColor;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            transition: background-color 0.5s, color 0.5s;
+            cursor: pointer;
+            &:hover {
+                background-color: $hoverColor;
+                color: $hoverTextColor ;
+               }
+        }
+    }
+         }
+         &__box3{
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 3rem;
+            margin-bottom: 10vh;
+        &__title{
+            text-align: center;
+            h2{
+                white-space: nowrap; 
+                overflow: hidden;        
+                text-overflow: ellipsis;
+            }
+        }
+        &__text{
+            max-width: 100%;
+            margin-top: 2rem;
+            color: $text-color;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        }
+        }
+       
+    }
+     input[type="radio"] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    input[type="radio"] + label {
+        position: relative;
+        display: inline-block;
+        user-select: none;
+        padding-left: 4rem;
+        color: $text-color;
+        font-size: 1.5rem;
+        cursor: pointer;
+        line-height: 3rem;
+    }
+     input[type=radio] + label:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2rem;
+        height: 2rem;
+        background: transparent;
+        border: 3px solid $borderLineColor;
+        border-radius: 50%; 
+     }
+     input[type="radio"]:checked + label:before {
+        background: transparent;
+        border-color: $borderLineColor;
+    }
+    input[type="radio"]:checked + label:after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 1.1rem;
+        height: 1.1rem;
+        transform: translate(-40%,-40%);
+        background-color:$divBackgroundColor;
+        border-radius: 50%;
+    }
+    input[type="radio"]:checked +label{
+        color:$hoverTextColor ;
+        font-weight: bold;
+    }
+ 
+.footer{
+position: fixed;
+bottom: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+height: 11rem;
+background-color: $secondary-color;
+text-align: center;
+font-size: 1rem;
+&__text{
+    position: relative;
+    margin-left:3rem;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 2;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        right: 30%;
+        bottom: 10%;
+        background-color: transparent;
+        border: 1px solid $hoverColor;
+        transition: transform 0.5s;
+    }
+    &:hover::after{
+transform: rotate(360deg)
+    }
+}
+&__mask{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    margin-right: 1rem;
+    background-color: $secondary-color;
+    z-index: 1;
+}
+&__btn {
+    position: relative;
+    width: 20rem;
+    height: 4rem;
+    margin-right: 2rem;
+    background:transparent;
+    color: white;
+    border: 1px solid  $btnBorderLineColor;
+    cursor: pointer;
+    transition: border 0.5s;
+    z-index: 10;
+    &:hover, &:focus {
+        border: 1px solid white;
+    }
+    &:focus  &__icon{
+        animation: rotation 0.8s both;
+    }
+}
+&__btn:focus ~ &__optionsBox,
+&__optionsBox:hover {
+    bottom: 100%;
+    
+}
+&__optionsBox{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 20rem;
+        height: 7rem;
+        padding: 1rem 0;
+    margin-right: 2rem;
+    background-color: $divBackgroundColor;
+    transition: bottom 0.5s;
+    z-index: -100;
+    &__btn {
+        margin-left: 2rem;
+        background-color: transparent;
+        border: none;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: color 0.3s;
+        z-index: 10;
+
+        i{
+margin-right: 0.4rem;
+        }
+        &:hover, &:active {
+         color: $hoverColor;
+        }
+    }
+}
+}
+.panel{
+    position: fixed;
+    left:0;
+    top: -20rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 16vh;
+    width: 100%;
+    background-color: 
+    $bodyBackgroundColor;
+    z-index: 1;
+    transition: top 0.5s;
+    &__box{
+        display: flex;
+        &__add, &__delete{
+            margin: 1rem;
+            text-align: center;
+            font-size: 1.2rem;
+            h2{
+                margin-bottom: 1rem;
+            }
+            input{
+                width: 60%;
+                padding: 0.5rem 1rem;
+            }
+            button {
+                padding: 0.5rem 1rem;
+                background:transparent;
+                color: rgb(175, 173, 173);
+                border: 1px solid $borderLineColor;
+                border-radius: 0.5rem;
+                text-transform: uppercase;
+                transition: background-color 0.5s, color 0.5s;
+                cursor: pointer;
+                &:hover {
+                    background-color: $hoverColor;
+                    color: $hoverTextColor ;
+                   }
+            }
+        }
+    }
+        #refresh {
+            position: relative;
+            bottom: -20px;
+            padding: 0.4rem 0.6rem;
+            background:transparent;
+            color: rgb(175, 173, 173);
+            border: 1px solid $borderLineColor;
+            border-radius: 0.5rem;
+            text-transform: uppercase;
+            transition: background-color 0.5s, color 0.5s;
+            cursor: pointer;
+            &:hover {
+                background-color: $hoverColor;
+                color: $hoverTextColor ;
+               }
+        }
+    &--active{
+        top: 7rem;
+    }
+
+}
+
+@import './medium';
+@import './large';

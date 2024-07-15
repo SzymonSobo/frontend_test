@@ -1,0 +1,116 @@
+@media(min-width:960px){
+    html{
+        font-size: 62.5%;
+     }
+     .header{
+        &__text{
+            margin-right: 5rem;   
+        }
+        &__box{
+width: 7rem;
+height: 7rem;
+&__item{
+    font-size: 5rem;
+}
+        }
+     }
+.main{
+        &__title{
+            margin-top: 6rem;
+        }
+&__boxes{
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-top: 7rem;
+    &__box{
+        margin: 0 1.5rem;
+    }
+    &__box1{
+        align-items: flex-start;
+        width: 30%;
+        &__title{
+            text-align: center;
+        }
+        &__radius{
+            margin-top: 6rem;
+            &__label{
+                margin: 0.5rem 0;
+            }
+    }
+}
+&__box2{
+    align-items: center;
+width: 30%;
+&__title{
+    text-align: center;
+}
+&__btnBox{
+    align-items: center;
+    flex-direction: row;
+    margin-top: 6rem;
+
+    &__btn1, &__btn2{
+        width: 14rem;
+        margin: 0 1rem;
+    }
+}
+}
+
+
+&__box3{
+    align-items: center;
+    width: 30%;
+    margin-top: 0;
+
+    &__text{
+        margin-top: 6rem;
+    }
+}
+
+}
+input[type="radio"] + label {
+    padding-left: 5rem;
+    font-size: 1.7rem;
+
+}
+input[type=radio] + label:before {
+width: 2.5rem;
+height: 2.5rem;
+}
+input[type="radio"]:checked + label:after {
+
+    width: 1.5rem;
+height: 1.5rem;
+transform: translate(-15%,-15%);
+}
+        }
+        .footer{
+            &__text{
+                font-size: 2rem;
+        }
+    }
+        .panel{ 
+            height: 20vh;
+            &__box{
+            &__add, &__delete{
+                margin: 2rem;
+                input{
+                    padding: 0.8rem 1.5rem;
+                    margin: 1rem;
+                }
+                button {
+                    padding: 0.8rem 1.5rem;
+                }
+            }
+        }
+            #refresh{
+                    margin: 1rem;
+                    padding: 0.8rem 1.5rem;
+            }
+            &--active{
+                top: 8rem;
+            }
+        }
+    }
+
